@@ -1,0 +1,65 @@
+{
+ "META-DATA": {
+  "Path": "ADCB/1MK/SchoolInquiry/API/Scl_prvdr.api",
+  "References": {"Template": {
+   "20210703130813014000": "ADCB/1MK/SchoolInquiry/Template/SklInqReq.ofd",
+   "20210703182258000000": "ADCB/1MK/SchoolInquiry/Template/SklResPro.ofd"
+  }}
+ },
+ "APIRepository": [{
+  "ServerGroup": {"ServerGroupDetails": [{
+   "ServerID": "20210501110931008259",
+   "Enable": "1"
+  }]},
+  "ServerGroupID": "20210703130355013149",
+  "ID": "20210703130328013145",
+  "APIDocID": "20210703130050013132",
+  "Operations": [{
+   "Type": "POST",
+   "ResponseTemplates": [{
+    "TemplateCode": "20210703182258000000",
+    "HTTPStatusCode": "200",
+    "MessageFormat": "JSON"
+   }],
+   "Parameters": {},
+   "ServerGroup": {
+    "ServerGroupDetails": [{
+     "ServerID": "20210501110931008259",
+     "Enable": "1"
+    }],
+    "GroupID": "20210703130409013151"
+   },
+   "ParamID": "20210704181104000437",
+   "OperationName": "/sklid",
+   "OperationID": "20210703130343013147",
+   "RequestTemplates": [{
+    "TemplateCode": "20210703130813014000",
+    "MessageFormat": "JSON"
+   }],
+   "IsDeprecated": "0",
+   "Summary": "/sklid",
+   "ServerGroupID": "20210703130409013151"
+  }],
+  "URL": "/sklid"
+ }],
+ "APIDocRepository": {
+  "Type": "P",
+  "ServerGroup": {
+   "ServerGroupDetails": [{
+    "ServerID": "20210501110931008259",
+    "Enable": "1"
+   }],
+   "GroupID": "20210703130135013138"
+  },
+  "IsProxy": "0",
+  "FileName": "Scl_prvdr",
+  "SystemCode": "20210501110759008257",
+  "WSType": "1",
+  "APIDocInfo": {
+   "Version": "1.0",
+   "Title": "Scl_prvdr"
+  },
+  "ID": "20210703130050013132",
+  "APIDocInfoID": "20210703130050013133"
+ }
+}

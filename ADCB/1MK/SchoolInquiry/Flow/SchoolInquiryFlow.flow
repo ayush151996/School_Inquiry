@@ -1,0 +1,575 @@
+{
+ "FlowRepository": {
+  "LoggingReq": "1",
+  "InventoryNumber": "20210703130538013156",
+  "Type": "T",
+  "FlowName": "SchoolInquiryFlow",
+  "FlowContent": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><bpmn2:definitions xmlns:OF=\"http://Oliv-Fabric/schema/bpmn/bpmn2\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" id=\"_RdgBELNaEeSYkoSLDs6j-w\" targetNamespace=\"http://activiti.org/bpmn\">\n  <bpmn2:process FlowInsJson=\"{&quot;20210704190754000476&quot;:{&quot;Type&quot;:&quot;Transform&quot;,&quot;Id&quot;:&quot;Task_00n9if1&quot;},&quot;20210704190754000475&quot;:{&quot;Type&quot;:&quot;Transform&quot;,&quot;Id&quot;:&quot;Task_1fvvt5w&quot;},&quot;20210706145420007386&quot;:{&quot;Type&quot;:&quot;Transform&quot;,&quot;Id&quot;:&quot;Task_0lyrr8a&quot;},&quot;FlowType&quot;:&quot;Timer&quot;,&quot;20210704190754000474&quot;:{&quot;11&quot;:&quot;EndEvent_0atunuz&quot;,&quot;1&quot;:&quot;StartEvent_00uzp3k&quot;,&quot;Type&quot;:&quot;Flow&quot;,&quot;2&quot;:&quot;Task_0lyrr8a&quot;,&quot;3&quot;:&quot;Task_1pmhr4q&quot;,&quot;4&quot;:&quot;IntermediateThrowEvent_09qoru0&quot;,&quot;5&quot;:&quot;Task_1fvvt5w&quot;,&quot;6&quot;:&quot;IntermediateThrowEvent_14rlf71&quot;,&quot;7&quot;:&quot;Task_12t8u94&quot;,&quot;8&quot;:&quot;IntermediateThrowEvent_07tjxuf&quot;,&quot;9&quot;:&quot;Task_00n9if1&quot;,&quot;10&quot;:&quot;IntermediateThrowEvent_09gek8x&quot;}}\" FlowProperties=\"{&quot;Variables&quot;:[],&quot;Messages&quot;:[],&quot;Operations&quot;:[{&quot;OperationName&quot;:&quot;SCHOOLINQUIRY&quot;,&quot;RequestVariable&quot;:&quot;schoolinqreq&quot;,&quot;ResponseVariable&quot;:&quot;schoolinqres&quot;,&quot;OperationDes&quot;:&quot;POST-/sklid-/sklid&quot;,&quot;OperationID&quot;:&quot;20210703130343013147&quot;,&quot;MsgFormat&quot;:&quot;JSON&quot;,&quot;id&quot;:&quot;16253180235768946&quot;,&quot;ApiType&quot;:&quot;1&quot;,&quot;ReqTemplateID&quot;:&quot;20210703130813014000&quot;},{&quot;OperationName&quot;:&quot;SCHOOLCONAPI&quot;,&quot;RequestVariable&quot;:&quot;schoolconreq&quot;,&quot;ResponseVariable&quot;:&quot;schoolconres&quot;,&quot;OperationDes&quot;:&quot;GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}&quot;,&quot;OperationID&quot;:&quot;20210703130209013143&quot;,&quot;MsgFormat&quot;:&quot;JSON&quot;,&quot;id&quot;:&quot;16253180925482956&quot;,&quot;ApiType&quot;:&quot;1&quot;},{&quot;OperationName&quot;:&quot;CustSpecificAccessToken&quot;,&quot;RequestVariable&quot;:&quot;Acc_Req&quot;,&quot;ResponseVariable&quot;:&quot;Acc_Res&quot;,&quot;OperationDes&quot;:&quot;POST-/OAuthToken-OAuthToken_Provider&quot;,&quot;OperationID&quot;:&quot;20210607150046000608&quot;,&quot;MsgFormat&quot;:&quot;JSON&quot;,&quot;id&quot;:&quot;16255536147664107&quot;,&quot;ReqTemplateID&quot;:&quot;20210607173317000000&quot;,&quot;ApiType&quot;:&quot;1&quot;}],&quot;Errors&quot;:[],&quot;AllFLows&quot;:[],&quot;AllComponents&quot;:[],&quot;Signals&quot;:[],&quot;ANONYMOUS&quot;:[{&quot;VariableName&quot;:&quot;V_AUTH&quot;},{&quot;VariableName&quot;:&quot;SCHOOLADDRESS&quot;},{&quot;VariableName&quot;:&quot;SCHOOLEMIRATES&quot;},{&quot;VariableName&quot;:&quot;SCHOOLEMIRATESID&quot;},{&quot;VariableName&quot;:&quot;SCHOOLID&quot;},{&quot;VariableName&quot;:&quot;SCHOOLNAME&quot;},{&quot;VariableName&quot;:&quot;SCHOOLSTATUS&quot;},{&quot;VariableName&quot;:&quot;V_DATE&quot;}]}\" OrchestrationCode=\"20210704190754000474\" id=\"Process_1\">\n    <bpmn2:task OF:INSCODE=\"20210704190754000474\" OF:SL=\"5\" OF:addSettings=\"0\" OF:category=\"TransformAndGenerate\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"Task_1fvvt5w\" name=\"Framing Request\">\n      <bpmn2:extensionElements>\n        <TaskAttributes>\n          <Input>\n            <MessageVariable>schoolconreq<\/MessageVariable>\n            <ExcludeNamespace>0<\/ExcludeNamespace>\n            <MTI/>\n            <TransformationJson>{\"FlowID\":\"20210703130538013156\",\"orchestrateMode\":\"T\",\"TransformationID\":\"20210704190754000475\",\"Mode\":\"M\",\"TransformationRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210607150046000608-CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"},{\"Type\":\"API\",\"Name\":\"20210703130343013147-SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"2\"},{\"Type\":\"API\",\"Name\":\"20210703130209013143-SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"Direction\":\"RIGHT\",\"MsgFormat\":\"JSON\",\"Serial\":\"3\"}],\"Code\":\"20210704190754000475\",\"Description\":\"\",\"Category\":6,\"Details\":[{\"Verb\":\"Map\",\"ContextName\":\"0\",\"TargetKey\":\"schoolconreq.PathParam.SchoolEmiratesId\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"Assign\",\"ContextName\":\"\\\"Bearer \\\"+$('Acc_Res.Body.access_token')\",\"TargetKey\":\"schoolconreq.HeaderParam.Authorization\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"Map\",\"ContextName\":\"application/json\",\"TargetKey\":\"schoolconreq.HeaderParam.content-type\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3}],\"LoopRepository\":{\"schoolconres.Body.SchoolDetails[]\":\"L1\",\"schoolconres.Body.Data.SchoolDetails[]\":\"L2\"},\"LoopIndexCount\":3},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"}]},\"TransformationSet\":[{\"verb\":\"Map\",\"context\":\"0\",\"target\":\"schoolconreq.PathParam.SchoolEmiratesId\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16253184223396609\",\"sl\":1},{\"verb\":\"Assign\",\"context\":\"\\\"Bearer \\\"+$('Acc_Res.Body.access_token')\",\"target\":\"schoolconreq.HeaderParam.Authorization\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255654257907873\",\"sl\":2},{\"verb\":\"Map\",\"context\":\"application/json\",\"target\":\"schoolconreq.HeaderParam.content-type\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"1625565416060349\",\"sl\":3}]}<\/TransformationJson>\n            <TransformationID/>\n          <\/Input>\n          <Output/>\n        <\/TaskAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_0p7an69<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_1tj99xb<\/bpmn2:outgoing>\n    <\/bpmn2:task>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_1tj99xb\" sourceRef=\"Task_1fvvt5w\" targetRef=\"IntermediateThrowEvent_14rlf71\"/>\n    <bpmn2:task OF:INSCODE=\"20210704190754000474\" OF:SL=\"9\" OF:addSettings=\"0\" OF:category=\"TransformAndGenerate\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"Task_00n9if1\" name=\"Framing Response\">\n      <bpmn2:extensionElements>\n        <TaskAttributes>\n          <Input>\n            <MessageVariable>schoolinqres<\/MessageVariable>\n            <ExcludeNamespace>0<\/ExcludeNamespace>\n            <MTI/>\n            <TransformationJson>{\"FlowID\":\"20210703130538013156\",\"orchestrateMode\":\"T\",\"TransformationID\":\"20210704190754000476\",\"Mode\":\"M\",\"TransformationRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210703130209013143-SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"},{\"Type\":\"API\",\"Name\":\"20210703130343013147-SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"Direction\":\"RIGHT\",\"MsgFormat\":\"JSON\",\"Serial\":\"2\"}],\"Code\":\"20210704190754000476\",\"Description\":\"\",\"Category\":6,\"Details\":[{\"Verb\":\"Loop\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails')\",\"TargetKey\":\"K\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolStatus')\",\"TargetKey\":\"schoolinqres.Body.SchoolDetails[K].SchoolStatus\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolId')\",\"TargetKey\":\"schoolinqres.Body.SchoolDetails[K].SchoolId\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolEmirates')\",\"TargetKey\":\"schoolinqres.Body.SchoolDetails[K].SchoolEmirates\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":4},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolAddress')\",\"TargetKey\":\"schoolinqres.Body.SchoolDetails[K].SchoolAddress\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":5},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolName')\",\"TargetKey\":\"schoolinqres.Body.SchoolDetails[K].SchoolName\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":6},{\"Verb\":\"EndLoop\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":7},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Context.HttpStatus')\",\"TargetKey\":\"schoolinqres.Context.HttpStatus\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":8}],\"LoopRepository\":{\"schoolconres.Body.SchoolDetails[]\":\"L1\",\"schoolconres.Body.Data.SchoolDetails[]\":\"K\"},\"LoopIndexCount\":3},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"}]},\"TransformationSet\":[{\"verb\":\"Loop\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails')\",\"target\":\"K\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"16254684757715573\",\"sl\":1},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolStatus')\",\"target\":\"schoolinqres.Body.SchoolDetails[K].SchoolStatus\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16254055993487616\",\"sl\":2},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolId')\",\"target\":\"schoolinqres.Body.SchoolDetails[K].SchoolId\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16254056089022065\",\"sl\":3},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolEmirates')\",\"target\":\"schoolinqres.Body.SchoolDetails[K].SchoolEmirates\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16254056092576803\",\"sl\":4},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolAddress')\",\"target\":\"schoolinqres.Body.SchoolDetails[K].SchoolAddress\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16254056094109770\",\"sl\":5},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[K].SchoolName')\",\"target\":\"schoolinqres.Body.SchoolDetails[K].SchoolName\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"1625405609750738\",\"sl\":6},{\"verb\":\"EndLoop\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16254684757715093\",\"sl\":7},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Context.HttpStatus')\",\"target\":\"schoolinqres.Context.HttpStatus\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"1625416610577799\",\"sl\":8}]}<\/TransformationJson>\n            <TransformationID/>\n          <\/Input>\n          <Output/>\n        <\/TaskAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_1f6ycj1<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_1ijwoob<\/bpmn2:outgoing>\n    <\/bpmn2:task>\n    <bpmn2:task OF:INSCODE=\"20210704190754000474\" OF:SL=\"7\" OF:addSettings=\"0\" OF:category=\"Invoke\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"Task_12t8u94\" name=\"Invoke API\">\n      <bpmn2:extensionElements>\n        <TaskAttributes>\n          <Input>\n            <FlowAttributes>\n              <ConnectionTimeOut>60000<\/ConnectionTimeOut>\n              <OperationName>SCHOOLCONAPI<\/OperationName>\n              <ReqMsgVariable>schoolconreq<\/ReqMsgVariable>\n              <ResMsgVariable>schoolconres<\/ResMsgVariable>\n              <APIOperationDes>GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}<\/APIOperationDes>\n              <APIOperationID>20210703130209013143<\/APIOperationID>\n            <\/FlowAttributes>\n          <\/Input>\n          <Output/>\n        <\/TaskAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_0rd12vg<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_01t33rk<\/bpmn2:outgoing>\n    <\/bpmn2:task>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_01t33rk\" sourceRef=\"Task_12t8u94\" targetRef=\"IntermediateThrowEvent_07tjxuf\"/>\n    <bpmn2:endEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"11\" OF:addSettings=\"0\" OF:category=\"Default\" OF:isNew=\"0\" id=\"EndEvent_0atunuz\">\n      <bpmn2:extensionElements/>\n      <bpmn2:incoming>SequenceFlow_0mkxfi3<\/bpmn2:incoming>\n    <\/bpmn2:endEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_1ijwoob\" sourceRef=\"Task_00n9if1\" targetRef=\"IntermediateThrowEvent_09gek8x\"/>\n    <bpmn2:task OF:INSCODE=\"20210704190754000474\" OF:SL=\"2\" OF:addSettings=\"0\" OF:category=\"TransformAndGenerate\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"Task_0lyrr8a\" name=\"Transform AcessToken Req\">\n      <bpmn2:extensionElements>\n        <TaskAttributes>\n          <Input>\n            <MessageVariable>Acc_Req<\/MessageVariable>\n            <ExcludeNamespace>0<\/ExcludeNamespace>\n            <MTI/>\n            <TransformationJson>{\"FlowID\":\"20210703130538013156\",\"orchestrateMode\":\"T\",\"TransformationID\":\"20210706145420007386\",\"Mode\":\"M\",\"TransformationRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210607150046000608-CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"Direction\":\"RIGHT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"},{\"Type\":\"API\",\"Name\":\"20210703130343013147-SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"2\"}],\"Code\":\"20210706145420007386\",\"Description\":\"\",\"Category\":6,\"Details\":[{\"Verb\":\"Map\",\"ContextName\":\"11900010\",\"TargetKey\":\"Acc_Req.Body.CID\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"Map\",\"ContextName\":\"SchoolInq_service\",\"TargetKey\":\"Acc_Req.Body.scope\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2}],\"LoopRepository\":{},\"LoopIndexCount\":1},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[]},\"TransformationSet\":[{\"verb\":\"Map\",\"context\":\"11900010\",\"target\":\"Acc_Req.Body.CID\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255631115413006\",\"sl\":1},{\"verb\":\"Map\",\"context\":\"SchoolInq_service\",\"target\":\"Acc_Req.Body.scope\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255631149363482\",\"sl\":2}]}<\/TransformationJson>\n            <TransformationID/>\n          <\/Input>\n          <Output/>\n        <\/TaskAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_0oyiep9<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_1tem1ws<\/bpmn2:outgoing>\n    <\/bpmn2:task>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_1tem1ws\" sourceRef=\"Task_0lyrr8a\" targetRef=\"Task_1pmhr4q\"/>\n    <bpmn2:task OF:INSCODE=\"20210704190754000474\" OF:SL=\"3\" OF:addSettings=\"0\" OF:category=\"Invoke\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"Task_1pmhr4q\" name=\"invoke Cust Specific access token\">\n      <bpmn2:extensionElements>\n        <TaskAttributes>\n          <Input>\n            <FlowAttributes>\n              <ConnectionTimeOut>60000<\/ConnectionTimeOut>\n              <OperationName>CustSpecificAccessToken<\/OperationName>\n              <ReqMsgVariable>Acc_Req<\/ReqMsgVariable>\n              <ResMsgVariable>Acc_Res<\/ResMsgVariable>\n              <APIOperationDes>POST-/OAuthToken-OAuthToken_Provider<\/APIOperationDes>\n              <APIOperationID>20210607150046000608<\/APIOperationID>\n            <\/FlowAttributes>\n          <\/Input>\n          <Output/>\n        <\/TaskAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_1tem1ws<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_0kdfuwu<\/bpmn2:outgoing>\n    <\/bpmn2:task>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_0kdfuwu\" sourceRef=\"Task_1pmhr4q\" targetRef=\"IntermediateThrowEvent_09qoru0\"/>\n    <bpmn2:intermediateThrowEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"4\" OF:addSettings=\"0\" OF:category=\"Oracle\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"IntermediateThrowEvent_09qoru0\" name=\"logs\">\n      <bpmn2:extensionElements>\n        <EventAttributes>\n          <Input>\n            <MultitenantEnable>0<\/MultitenantEnable>\n            <TransactionType>A<\/TransactionType>\n            <EndPointDetails>\n              <SystemCodeDes/>\n              <SystemCode/>\n              <Transport/>\n            <\/EndPointDetails>\n            <OracleJson>{\"FlowID\":\"20210703130538013156\",\"PersistenceID\":\"\",\"orchestrateMode\":\"P\",\"PersistenceSet\":[{\"verb\":\"Assign\",\"context\":\"M{STRINGIFY($('Acc_Res.Context.MsgContent'))}\",\"target\":\"V_AUTH\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255658785614963\",\"sl\":1},{\"verb\":\"StartProc\",\"context\":\"SP_ADCB_AUDIT_LOG\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"16255652483977420\",\"sl\":2},{\"verb\":\"Input\",\"context\":\"SchoolInquiry_AuthToken_Res\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652742388533\",\"sl\":3},{\"verb\":\"Input\",\"context\":\"$('V_AUTH')\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652714002597\",\"sl\":4},{\"verb\":\"EndProc\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652483974000\",\"sl\":5}],\"PersistenceRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210607150046000608-CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"}],\"Code\":\"\",\"Description\":\"\",\"Category\":3,\"Details\":[{\"Verb\":\"Assign\",\"ContextName\":\"M{STRINGIFY($('Acc_Res.Context.MsgContent'))}\",\"TargetKey\":\"V_AUTH\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"StartProc\",\"ContextName\":\"SP_ADCB_AUDIT_LOG\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"Input\",\"ContextName\":\"SchoolInquiry_AuthToken_Res\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3},{\"Verb\":\"Input\",\"ContextName\":\"$('V_AUTH')\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":4},{\"Verb\":\"EndProc\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":5}],\"LoopRepository\":{},\"LoopIndexCount\":1},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"}]},\"EndPointID\":\"20210501120442008282\",\"DatabaseType\":\"Oracle\",\"Mode\":\"M\"}<\/OracleJson>\n            <PersistenceID>20210706145420007387<\/PersistenceID>\n          <\/Input>\n          <Output>\n            <EndpointID>20210501120442008282<\/EndpointID>\n          <\/Output>\n        <\/EventAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_0kdfuwu<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_0p7an69<\/bpmn2:outgoing>\n    <\/bpmn2:intermediateThrowEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_0p7an69\" sourceRef=\"IntermediateThrowEvent_09qoru0\" targetRef=\"Task_1fvvt5w\"/>\n    <bpmn2:intermediateThrowEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"6\" OF:addSettings=\"0\" OF:category=\"Oracle\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"IntermediateThrowEvent_14rlf71\" name=\"Invoke DB\">\n      <bpmn2:extensionElements>\n        <EventAttributes>\n          <Input>\n            <MultitenantEnable>0<\/MultitenantEnable>\n            <TransactionType>A<\/TransactionType>\n            <EndPointDetails>\n              <SystemCodeDes/>\n              <SystemCode/>\n              <Transport/>\n            <\/EndPointDetails>\n            <OracleJson>{\"FlowID\":\"20210703130538013156\",\"PersistenceID\":\"\",\"orchestrateMode\":\"P\",\"PersistenceSet\":[{\"verb\":\"Assign\",\"context\":\"$('schoolconreq.PathParam.SchoolEmiratesId')\",\"target\":\"V_AUTH\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255658785614963\",\"sl\":1},{\"verb\":\"StartProc\",\"context\":\"SP_ADCB_AUDIT_LOG\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"16255652483977420\",\"sl\":2},{\"verb\":\"Input\",\"context\":\"SchoolInquiryRequest\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652742388533\",\"sl\":3},{\"verb\":\"Input\",\"context\":\"$('V_AUTH')\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652714002597\",\"sl\":4},{\"verb\":\"EndProc\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652483974000\",\"sl\":5}],\"PersistenceRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210703130209013143-SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"}],\"Code\":\"\",\"Description\":\"\",\"Category\":3,\"Details\":[{\"Verb\":\"Assign\",\"ContextName\":\"$('schoolconreq.PathParam.SchoolEmiratesId')\",\"TargetKey\":\"V_AUTH\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"StartProc\",\"ContextName\":\"SP_ADCB_AUDIT_LOG\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"Input\",\"ContextName\":\"SchoolInquiryRequest\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3},{\"Verb\":\"Input\",\"ContextName\":\"$('V_AUTH')\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":4},{\"Verb\":\"EndProc\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":5}],\"LoopRepository\":{\"schoolconres.Body.Data.SchoolDetails[]\":\"L1\"},\"LoopIndexCount\":2},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"}]},\"EndPointID\":\"20210501120442008282\",\"DatabaseType\":\"Oracle\",\"Mode\":\"M\"}<\/OracleJson>\n            <PersistenceID>20210706154611007569<\/PersistenceID>\n          <\/Input>\n          <Output>\n            <EndpointID>20210501120442008282<\/EndpointID>\n          <\/Output>\n        <\/EventAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_1tj99xb<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_0rd12vg<\/bpmn2:outgoing>\n    <\/bpmn2:intermediateThrowEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_0rd12vg\" sourceRef=\"IntermediateThrowEvent_14rlf71\" targetRef=\"Task_12t8u94\"/>\n    <bpmn2:intermediateThrowEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"8\" OF:addSettings=\"0\" OF:category=\"Oracle\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"IntermediateThrowEvent_07tjxuf\" name=\"After REST Call\">\n      <bpmn2:extensionElements>\n        <EventAttributes>\n          <Input>\n            <MultitenantEnable>0<\/MultitenantEnable>\n            <TransactionType>A<\/TransactionType>\n            <EndPointDetails>\n              <SystemCodeDes/>\n              <SystemCode/>\n              <Transport/>\n            <\/EndPointDetails>\n            <OracleJson>{\"FlowID\":\"20210703130538013156\",\"PersistenceID\":\"\",\"orchestrateMode\":\"P\",\"PersistenceSet\":[{\"verb\":\"Assign\",\"context\":\"M{STRINGIFY($('schoolconres.Body'))}\",\"target\":\"V_AUTH\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255658785614963\",\"sl\":1},{\"verb\":\"StartProc\",\"context\":\"SP_ADCB_AUDIT_LOG\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"16255652483977420\",\"sl\":2},{\"verb\":\"Input\",\"context\":\"SchoolInquiryRequest\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652742388533\",\"sl\":3},{\"verb\":\"Input\",\"context\":\"$('V_AUTH')\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652714002597\",\"sl\":4},{\"verb\":\"EndProc\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16255652483974000\",\"sl\":5}],\"PersistenceRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210703130209013143-SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"}],\"Code\":\"\",\"Description\":\"\",\"Category\":3,\"Details\":[{\"Verb\":\"Assign\",\"ContextName\":\"M{STRINGIFY($('schoolconres.Body'))}\",\"TargetKey\":\"V_AUTH\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"StartProc\",\"ContextName\":\"SP_ADCB_AUDIT_LOG\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"Input\",\"ContextName\":\"SchoolInquiryRequest\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3},{\"Verb\":\"Input\",\"ContextName\":\"$('V_AUTH')\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":4},{\"Verb\":\"EndProc\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":5}],\"LoopRepository\":{\"schoolconres.Body.Data.SchoolDetails[]\":\"L1\"},\"LoopIndexCount\":2},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"}]},\"EndPointID\":\"20210501120442008282\",\"DatabaseType\":\"Oracle\",\"Mode\":\"M\"}<\/OracleJson>\n            <PersistenceID>20210706155543007607<\/PersistenceID>\n          <\/Input>\n          <Output>\n            <EndpointID>20210501120442008282<\/EndpointID>\n          <\/Output>\n        <\/EventAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_01t33rk<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_1f6ycj1<\/bpmn2:outgoing>\n    <\/bpmn2:intermediateThrowEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_1f6ycj1\" sourceRef=\"IntermediateThrowEvent_07tjxuf\" targetRef=\"Task_00n9if1\"/>\n    <bpmn2:intermediateThrowEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"10\" OF:addSettings=\"0\" OF:category=\"Oracle\" OF:isCommented=\"0\" OF:isNew=\"0\" id=\"IntermediateThrowEvent_09gek8x\" name=\"Database Operation\">\n      <bpmn2:extensionElements>\n        <EventAttributes>\n          <Input>\n            <MultitenantEnable>0<\/MultitenantEnable>\n            <TransactionType>A<\/TransactionType>\n            <EndPointDetails>\n              <SystemCodeDes/>\n              <SystemCode/>\n              <Transport/>\n            <\/EndPointDetails>\n            <OracleJson>{\"FlowID\":\"20210703130538013156\",\"PersistenceID\":\"\",\"orchestrateMode\":\"P\",\"PersistenceSet\":[{\"verb\":\"Assign\",\"context\":\"M{CurrentTime(dd-MMM-yyyy hh:mm:ss a)}\",\"target\":\"V_DATE\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285721757183240\",\"sl\":1},{\"verb\":\"Loop\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails')\",\"target\":\"M\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"1628571429312339\",\"sl\":2},{\"verb\":\"StartTable\",\"context\":\"I\",\"target\":\"INSTITUTION_MASTER\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":true,\"id\":\"16285715162206952\",\"sl\":3},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolAddress')\",\"target\":\"SCHOOLADDRESS\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285716779358244\",\"sl\":4},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmirates')\",\"target\":\"SCHOOLEMIRATES\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285716772653437\",\"sl\":5},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmiratesId')\",\"target\":\"SCHOOLEMIRATESID\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285716761655246\",\"sl\":6},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolId')\",\"target\":\"SCHOOLID\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285716754402657\",\"sl\":7},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolName')\",\"target\":\"SCHOOLNAME\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285714361065961\",\"sl\":8},{\"verb\":\"Map\",\"context\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolStatus')\",\"target\":\"SCHOOLSTATUS\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285714363724912\",\"sl\":9},{\"verb\":\"Assign\",\"context\":\"$('V_DATE')\",\"target\":\"UPDATE_ON\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285726878863972\",\"sl\":10},{\"verb\":\"EndTable\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285715162204659\",\"sl\":11},{\"verb\":\"EndLoop\",\"context\":\"\",\"target\":\"\",\"additionalInfo\":\"\",\"isCommented\":\"0\",\"isExpanded\":false,\"id\":\"16285714293124132\",\"sl\":12}],\"PersistenceRepository\":{\"MessageVariables\":[{\"Type\":\"API\",\"Name\":\"20210703130209013143-SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"1\"},{\"Type\":\"API\",\"Name\":\"20210703130343013147-SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"Direction\":\"LEFT\",\"MsgFormat\":\"JSON\",\"Serial\":\"2\"},{\"Type\":\"TABLE\",\"Name\":\"INSTITUTION_MASTER\",\"Direction\":\"RIGHT\",\"Serial\":\"3\"}],\"Code\":\"\",\"Description\":\"\",\"Category\":3,\"Details\":[{\"Verb\":\"Assign\",\"ContextName\":\"M{CurrentTime(dd-MMM-yyyy hh:mm:ss a)}\",\"TargetKey\":\"V_DATE\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":1},{\"Verb\":\"Loop\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails')\",\"TargetKey\":\"M\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":2},{\"Verb\":\"StartTable\",\"ContextName\":\"I\",\"TargetKey\":\"INSTITUTION_MASTER\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":3},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolAddress')\",\"TargetKey\":\"SCHOOLADDRESS\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":4},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmirates')\",\"TargetKey\":\"SCHOOLEMIRATES\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":5},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmiratesId')\",\"TargetKey\":\"SCHOOLEMIRATESID\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":6},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolId')\",\"TargetKey\":\"SCHOOLID\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":7},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolName')\",\"TargetKey\":\"SCHOOLNAME\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":8},{\"Verb\":\"Map\",\"ContextName\":\"$('schoolconres.Body.Data.SchoolDetails[M].SchoolStatus')\",\"TargetKey\":\"SCHOOLSTATUS\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":9},{\"Verb\":\"Assign\",\"ContextName\":\"$('V_DATE')\",\"TargetKey\":\"UPDATE_ON\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":10},{\"Verb\":\"EndTable\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":11},{\"Verb\":\"EndLoop\",\"ContextName\":\"\",\"TargetKey\":\"\",\"AdditionalInfo\":\"\",\"Proceed\":\"\",\"InstructionCommmented\":\"0\",\"Serial\":12}],\"LoopRepository\":{\"schoolconres.Body.Data.SchoolDetails[]\":\"L1\"},\"LoopIndexCount\":2},\"Properties\":{\"Variables\":[],\"Messages\":[],\"Operations\":[{\"OperationName\":\"SCHOOLINQUIRY\",\"RequestVariable\":\"schoolinqreq\",\"ResponseVariable\":\"schoolinqres\",\"OperationDes\":\"POST-/sklid-/sklid\",\"OperationID\":\"20210703130343013147\",\"MsgFormat\":\"JSON\",\"id\":\"16253180235768946\",\"ApiType\":\"1\",\"ReqTemplateID\":\"20210703130813014000\"},{\"OperationName\":\"SCHOOLCONAPI\",\"RequestVariable\":\"schoolconreq\",\"ResponseVariable\":\"schoolconres\",\"OperationDes\":\"GET-/v1/search/schools/school-emirateid/{SchoolEmiratesId}-/v1/search/schools/school-emirateid/{SchoolEmiratesId}\",\"OperationID\":\"20210703130209013143\",\"MsgFormat\":\"JSON\",\"id\":\"16253180925482956\",\"ApiType\":\"1\"},{\"OperationName\":\"CustSpecificAccessToken\",\"RequestVariable\":\"Acc_Req\",\"ResponseVariable\":\"Acc_Res\",\"OperationDes\":\"POST-/OAuthToken-OAuthToken_Provider\",\"OperationID\":\"20210607150046000608\",\"MsgFormat\":\"JSON\",\"id\":\"16255536147664107\",\"ReqTemplateID\":\"20210607173317000000\",\"ApiType\":\"1\"}],\"Errors\":[],\"AllFLows\":[],\"AllComponents\":[],\"Signals\":[],\"ANONYMOUS\":[{\"VariableName\":\"V_AUTH\"},{\"VariableName\":\"SCHOOLADDRESS\"},{\"VariableName\":\"SCHOOLEMIRATES\"},{\"VariableName\":\"SCHOOLEMIRATESID\"},{\"VariableName\":\"SCHOOLID\"},{\"VariableName\":\"SCHOOLNAME\"},{\"VariableName\":\"SCHOOLSTATUS\"},{\"VariableName\":\"V_DATE\"}]},\"EndPointID\":\"20210501120442008282\",\"DatabaseType\":\"Oracle\",\"Mode\":\"M\"}<\/OracleJson>\n            <PersistenceID>20210809180428001053<\/PersistenceID>\n          <\/Input>\n          <Output>\n            <EndpointID>20210501120442008282<\/EndpointID>\n          <\/Output>\n        <\/EventAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:incoming>SequenceFlow_1ijwoob<\/bpmn2:incoming>\n      <bpmn2:outgoing>SequenceFlow_0mkxfi3<\/bpmn2:outgoing>\n    <\/bpmn2:intermediateThrowEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_0mkxfi3\" sourceRef=\"IntermediateThrowEvent_09gek8x\" targetRef=\"EndEvent_0atunuz\"/>\n    <bpmn2:startEvent OF:INSCODE=\"20210704190754000474\" OF:SL=\"1\" OF:addSettings=\"0\" OF:category=\"Timer\" OF:isNew=\"0\" id=\"StartEvent_00uzp3k\" name=\"Invoke Timer\">\n      <bpmn2:extensionElements>\n        <EventAttributes>\n          <Input>\n            <CronExpression>0 0/1 * 1/1 * ~ *<\/CronExpression>\n          <\/Input>\n          <Output>\n            <JobCode>20210810100652002275<\/JobCode>\n          <\/Output>\n        <\/EventAttributes>\n      <\/bpmn2:extensionElements>\n      <bpmn2:outgoing>SequenceFlow_0oyiep9<\/bpmn2:outgoing>\n    <\/bpmn2:startEvent>\n    <bpmn2:sequenceFlow OF:INSCODE=\"20210704190754000474\" id=\"SequenceFlow_0oyiep9\" sourceRef=\"StartEvent_00uzp3k\" targetRef=\"Task_0lyrr8a\"/>\n  <\/bpmn2:process>\n  <bpmndi:BPMNDiagram id=\"BPMNDiagram_1\">\n    <bpmndi:BPMNPlane bpmnElement=\"Process_1\" id=\"BPMNPlane_1\">\n      <bpmndi:BPMNShape bpmnElement=\"Task_1fvvt5w\" id=\"Task_1fvvt5w_di\">\n        <dc:Bounds height=\"80\" width=\"100\" x=\"481\" y=\"179\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_1tj99xb\" id=\"SequenceFlow_1tj99xb_di\">\n        <di:waypoint x=\"581\" y=\"219\"/>\n        <di:waypoint x=\"614\" y=\"219\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"Task_00n9if1\" id=\"Task_00n9if1_di\">\n        <dc:Bounds height=\"80\" width=\"100\" x=\"888\" y=\"179\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"Task_12t8u94\" id=\"Task_12t8u94_di\">\n        <dc:Bounds height=\"80\" width=\"100\" x=\"695\" y=\"179\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_01t33rk\" id=\"SequenceFlow_01t33rk_di\">\n        <di:waypoint x=\"795\" y=\"219\"/>\n        <di:waypoint x=\"822\" y=\"219\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"EndEvent_0atunuz\" id=\"EndEvent_0atunuz_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"1008\" y=\"201\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_1ijwoob\" id=\"SequenceFlow_1ijwoob_di\">\n        <di:waypoint x=\"938\" y=\"179\"/>\n        <di:waypoint x=\"938\" y=\"150\"/>\n        <di:waypoint x=\"968\" y=\"150\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"Task_0lyrr8a\" id=\"Task_0lyrr8a_di\">\n        <dc:Bounds height=\"80\" width=\"100\" x=\"117\" y=\"170\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_1tem1ws\" id=\"SequenceFlow_1tem1ws_di\">\n        <di:waypoint x=\"217\" y=\"210\"/>\n        <di:waypoint x=\"247\" y=\"210\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"Task_1pmhr4q\" id=\"Task_1pmhr4q_di\">\n        <dc:Bounds height=\"80\" width=\"100\" x=\"247\" y=\"170\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_0kdfuwu\" id=\"SequenceFlow_0kdfuwu_di\">\n        <di:waypoint x=\"347\" y=\"210\"/>\n        <di:waypoint x=\"413\" y=\"210\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"IntermediateThrowEvent_09qoru0\" id=\"IntermediateThrowEvent_09qoru0_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"413\" y=\"192\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_0p7an69\" id=\"SequenceFlow_0p7an69_di\">\n        <di:waypoint x=\"447\" y=\"219\"/>\n        <di:waypoint x=\"481\" y=\"219\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"IntermediateThrowEvent_14rlf71\" id=\"IntermediateThrowEvent_14rlf71_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"614\" y=\"201\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_0rd12vg\" id=\"SequenceFlow_0rd12vg_di\">\n        <di:waypoint x=\"650\" y=\"219\"/>\n        <di:waypoint x=\"695\" y=\"219\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"IntermediateThrowEvent_07tjxuf\" id=\"IntermediateThrowEvent_07tjxuf_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"822\" y=\"201\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_1f6ycj1\" id=\"SequenceFlow_1f6ycj1_di\">\n        <di:waypoint x=\"858\" y=\"219\"/>\n        <di:waypoint x=\"888\" y=\"219\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"IntermediateThrowEvent_09gek8x\" id=\"IntermediateThrowEvent_09gek8x_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"968\" y=\"132\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_0mkxfi3\" id=\"SequenceFlow_0mkxfi3_di\">\n        <di:waypoint x=\"1004\" y=\"150\"/>\n        <di:waypoint x=\"1026\" y=\"150\"/>\n        <di:waypoint x=\"1026\" y=\"201\"/>\n      <\/bpmndi:BPMNEdge>\n      <bpmndi:BPMNShape bpmnElement=\"StartEvent_00uzp3k\" id=\"StartEvent_00uzp3k_di\">\n        <dc:Bounds height=\"36\" width=\"36\" x=\"-10\" y=\"192\"/>\n      <\/bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"SequenceFlow_0oyiep9\" id=\"SequenceFlow_0oyiep9_di\">\n        <di:waypoint x=\"26\" y=\"210\"/>\n        <di:waypoint x=\"117\" y=\"210\"/>\n      <\/bpmndi:BPMNEdge>\n    <\/bpmndi:BPMNPlane>\n  <\/bpmndi:BPMNDiagram>\n<\/bpmn2:definitions>",
+  "FlowOperations": [
+   {
+    "RequestVariable": "Acc_Req",
+    "OperationName": "CustSpecificAccessToken",
+    "OperationID": "20210607150046000608",
+    "MsgFormat": "JSON",
+    "ResponseVariable": "Acc_Res"
+   },
+   {
+    "RequestVariable": "schoolconreq",
+    "OperationName": "SCHOOLCONAPI",
+    "OperationID": "20210703130209013143",
+    "MsgFormat": "JSON",
+    "ResponseVariable": "schoolconres"
+   },
+   {
+    "RequestVariable": "schoolinqreq",
+    "OperationName": "SCHOOLINQUIRY",
+    "OperationID": "20210703130343013147",
+    "MsgFormat": "JSON",
+    "ResponseVariable": "schoolinqres"
+   }
+  ],
+  "CronExpression": "0 0/1 * 1/1 * ? *",
+  "OrchestrationCode": "20210704190754000474",
+  "OrchestrationRepository": {
+   "Category": "7",
+   "Details": [
+    {
+     "Serial": "1",
+     "TaskID": "StartEvent_00uzp3k",
+     "TaskDescription": "Invoke Timer",
+     "Verb": "StartFlow",
+     "InstructionCommmented": "0",
+     "Proceed": "0",
+     "JobDetails": {
+      "JobDescription": "Invoke Timer",
+      "JobCode": "20210810100652002275",
+      "JobCategory": "10",
+      "CronExpression": "0 0/1 * 1/1 * ? *"
+     }
+    },
+    {
+     "AdditionalInfo": "0",
+     "Serial": "2",
+     "TaskID": "Task_0lyrr8a",
+     "TaskDescription": "Transform AcessToken Req",
+     "Verb": "TransformAndGenerate",
+     "TransformationRepository": {
+      "MessageVariables": [
+       {
+        "Serial": "1",
+        "Type": "API",
+        "RequestVariable": "Acc_Req",
+        "ResponseVariable": "Acc_Res",
+        "Direction": "RIGHT",
+        "Name": "20210607150046000608-CustSpecificAccessToken"
+       },
+       {
+        "Serial": "2",
+        "Type": "API",
+        "RequestVariable": "schoolinqreq",
+        "ResponseVariable": "schoolinqres",
+        "Direction": "LEFT",
+        "Name": "20210703130343013147-SCHOOLINQUIRY"
+       }
+      ],
+      "Category": "6",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "Acc_Req.Body.CID",
+        "ContextName": "11900010"
+       },
+       {
+        "Serial": "2",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "Acc_Req.Body.scope",
+        "ContextName": "SchoolInq_service"
+       }
+      ],
+      "Code": "20210706145420007386"
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "Acc_Req",
+     "Proceed": "0",
+     "ContextName": "Transform AcessToken Req"
+    },
+    {
+     "Serial": "3",
+     "TaskID": "Task_1pmhr4q",
+     "TaskDescription": "invoke Cust Specific access token",
+     "Verb": "Invoke",
+     "InstructionCommmented": "0",
+     "TargetKey": "60000",
+     "Proceed": "0",
+     "ContextName": "CustSpecificAccessToken"
+    },
+    {
+     "AdditionalInfo": "A",
+     "Serial": "4",
+     "TaskID": "IntermediateThrowEvent_09qoru0",
+     "TaskDescription": "logs",
+     "Verb": "Persist",
+     "PersistenceRepository": {
+      "MessageVariables": [{
+       "Serial": "1",
+       "Type": "API",
+       "RequestVariable": "Acc_Req",
+       "ResponseVariable": "Acc_Res",
+       "Direction": "LEFT",
+       "Name": "20210607150046000608-CustSpecificAccessToken"
+      }],
+      "Category": "3",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "V_AUTH",
+        "ContextName": "M{STRINGIFY($('Acc_Res.Context.MsgContent'))}"
+       },
+       {
+        "Serial": "2",
+        "Verb": "StartProc",
+        "InstructionCommmented": "0",
+        "ContextName": "SP_ADCB_AUDIT_LOG"
+       },
+       {
+        "Serial": "3",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "SchoolInquiry_AuthToken_Res"
+       },
+       {
+        "Serial": "4",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "$('V_AUTH')"
+       },
+       {
+        "Serial": "5",
+        "Verb": "EndProc",
+        "InstructionCommmented": "0"
+       }
+      ]
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "20210501120442008282",
+     "Proceed": "0",
+     "ContextName": "20210706145420007387"
+    },
+    {
+     "AdditionalInfo": "0",
+     "Serial": "5",
+     "TaskID": "Task_1fvvt5w",
+     "TaskDescription": "Framing Request",
+     "Verb": "TransformAndGenerate",
+     "TransformationRepository": {
+      "MessageVariables": [
+       {
+        "Serial": "1",
+        "Type": "API",
+        "RequestVariable": "Acc_Req",
+        "ResponseVariable": "Acc_Res",
+        "Direction": "LEFT",
+        "Name": "20210607150046000608-CustSpecificAccessToken"
+       },
+       {
+        "Serial": "2",
+        "Type": "API",
+        "RequestVariable": "schoolinqreq",
+        "ResponseVariable": "schoolinqres",
+        "Direction": "LEFT",
+        "Name": "20210703130343013147-SCHOOLINQUIRY"
+       },
+       {
+        "Serial": "3",
+        "Type": "API",
+        "RequestVariable": "schoolconreq",
+        "ResponseVariable": "schoolconres",
+        "Direction": "RIGHT",
+        "Name": "20210703130209013143-SCHOOLCONAPI"
+       }
+      ],
+      "Category": "6",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolconreq.PathParam.SchoolEmiratesId",
+        "ContextName": "0"
+       },
+       {
+        "Serial": "2",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolconreq.HeaderParam.Authorization",
+        "ContextName": "\"Bearer \"+$('Acc_Res.Body.access_token')"
+       },
+       {
+        "Serial": "3",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolconreq.HeaderParam.content-type",
+        "ContextName": "application/json"
+       }
+      ],
+      "Code": "20210704190754000475"
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "schoolconreq",
+     "Proceed": "0",
+     "ContextName": "Framing Request"
+    },
+    {
+     "AdditionalInfo": "A",
+     "Serial": "6",
+     "TaskID": "IntermediateThrowEvent_14rlf71",
+     "TaskDescription": "Invoke DB",
+     "Verb": "Persist",
+     "PersistenceRepository": {
+      "MessageVariables": [{
+       "Serial": "1",
+       "Type": "API",
+       "RequestVariable": "schoolconreq",
+       "ResponseVariable": "schoolconres",
+       "Direction": "LEFT",
+       "Name": "20210703130209013143-SCHOOLCONAPI"
+      }],
+      "Category": "3",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "V_AUTH",
+        "ContextName": "$('schoolconreq.PathParam.SchoolEmiratesId')"
+       },
+       {
+        "Serial": "2",
+        "Verb": "StartProc",
+        "InstructionCommmented": "0",
+        "ContextName": "SP_ADCB_AUDIT_LOG"
+       },
+       {
+        "Serial": "3",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "SchoolInquiryRequest"
+       },
+       {
+        "Serial": "4",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "$('V_AUTH')"
+       },
+       {
+        "Serial": "5",
+        "Verb": "EndProc",
+        "InstructionCommmented": "0"
+       }
+      ]
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "20210501120442008282",
+     "Proceed": "0",
+     "ContextName": "20210706154611007569"
+    },
+    {
+     "Serial": "7",
+     "TaskID": "Task_12t8u94",
+     "TaskDescription": "Invoke API",
+     "Verb": "Invoke",
+     "InstructionCommmented": "0",
+     "TargetKey": "60000",
+     "Proceed": "0",
+     "ContextName": "SCHOOLCONAPI"
+    },
+    {
+     "AdditionalInfo": "A",
+     "Serial": "8",
+     "TaskID": "IntermediateThrowEvent_07tjxuf",
+     "TaskDescription": "After REST Call",
+     "Verb": "Persist",
+     "PersistenceRepository": {
+      "MessageVariables": [{
+       "Serial": "1",
+       "Type": "API",
+       "RequestVariable": "schoolconreq",
+       "ResponseVariable": "schoolconres",
+       "Direction": "LEFT",
+       "Name": "20210703130209013143-SCHOOLCONAPI"
+      }],
+      "Category": "3",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "V_AUTH",
+        "ContextName": "M{STRINGIFY($('schoolconres.Body'))}"
+       },
+       {
+        "Serial": "2",
+        "Verb": "StartProc",
+        "InstructionCommmented": "0",
+        "ContextName": "SP_ADCB_AUDIT_LOG"
+       },
+       {
+        "Serial": "3",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "SchoolInquiryRequest"
+       },
+       {
+        "Serial": "4",
+        "Verb": "Input",
+        "InstructionCommmented": "0",
+        "ContextName": "$('V_AUTH')"
+       },
+       {
+        "Serial": "5",
+        "Verb": "EndProc",
+        "InstructionCommmented": "0"
+       }
+      ]
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "20210501120442008282",
+     "Proceed": "0",
+     "ContextName": "20210706155543007607"
+    },
+    {
+     "AdditionalInfo": "0",
+     "Serial": "9",
+     "TaskID": "Task_00n9if1",
+     "TaskDescription": "Framing Response",
+     "Verb": "TransformAndGenerate",
+     "TransformationRepository": {
+      "MessageVariables": [
+       {
+        "Serial": "1",
+        "Type": "API",
+        "RequestVariable": "schoolconreq",
+        "ResponseVariable": "schoolconres",
+        "Direction": "LEFT",
+        "Name": "20210703130209013143-SCHOOLCONAPI"
+       },
+       {
+        "Serial": "2",
+        "Type": "API",
+        "RequestVariable": "schoolinqreq",
+        "ResponseVariable": "schoolinqres",
+        "Direction": "RIGHT",
+        "Name": "20210703130343013147-SCHOOLINQUIRY"
+       }
+      ],
+      "Category": "6",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Loop",
+        "InstructionCommmented": "0",
+        "TargetKey": "K",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails')"
+       },
+       {
+        "Serial": "2",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Body.SchoolDetails[K].SchoolStatus",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[K].SchoolStatus')"
+       },
+       {
+        "Serial": "3",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Body.SchoolDetails[K].SchoolId",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[K].SchoolId')"
+       },
+       {
+        "Serial": "4",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Body.SchoolDetails[K].SchoolEmirates",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[K].SchoolEmirates')"
+       },
+       {
+        "Serial": "5",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Body.SchoolDetails[K].SchoolAddress",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[K].SchoolAddress')"
+       },
+       {
+        "Serial": "6",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Body.SchoolDetails[K].SchoolName",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[K].SchoolName')"
+       },
+       {
+        "Serial": "7",
+        "Verb": "EndLoop",
+        "InstructionCommmented": "0"
+       },
+       {
+        "Serial": "8",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "schoolinqres.Context.HttpStatus",
+        "ContextName": "$('schoolconres.Context.HttpStatus')"
+       }
+      ],
+      "Code": "20210704190754000476"
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "schoolinqres",
+     "Proceed": "0",
+     "ContextName": "Framing Response"
+    },
+    {
+     "AdditionalInfo": "A",
+     "Serial": "10",
+     "TaskID": "IntermediateThrowEvent_09gek8x",
+     "TaskDescription": "Database Operation",
+     "Verb": "Persist",
+     "PersistenceRepository": {
+      "MessageVariables": [
+       {
+        "Serial": "1",
+        "Type": "API",
+        "RequestVariable": "schoolconreq",
+        "ResponseVariable": "schoolconres",
+        "Direction": "LEFT",
+        "Name": "20210703130209013143-SCHOOLCONAPI"
+       },
+       {
+        "Serial": "2",
+        "Type": "API",
+        "RequestVariable": "schoolinqreq",
+        "ResponseVariable": "schoolinqres",
+        "Direction": "LEFT",
+        "Name": "20210703130343013147-SCHOOLINQUIRY"
+       },
+       {
+        "Serial": "3",
+        "Type": "TABLE",
+        "Direction": "RIGHT",
+        "Name": "INSTITUTION_MASTER"
+       }
+      ],
+      "Category": "3",
+      "Details": [
+       {
+        "Serial": "1",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "V_DATE",
+        "ContextName": "M{CurrentTime(dd-MMM-yyyy hh:mm:ss a)}"
+       },
+       {
+        "Serial": "2",
+        "Verb": "Loop",
+        "InstructionCommmented": "0",
+        "TargetKey": "M",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails')"
+       },
+       {
+        "Serial": "3",
+        "Verb": "StartTable",
+        "InstructionCommmented": "0",
+        "TargetKey": "INSTITUTION_MASTER",
+        "ContextName": "I"
+       },
+       {
+        "Serial": "4",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLADDRESS",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolAddress')"
+       },
+       {
+        "Serial": "5",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLEMIRATES",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmirates')"
+       },
+       {
+        "Serial": "6",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLEMIRATESID",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolEmiratesId')"
+       },
+       {
+        "Serial": "7",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLID",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolId')"
+       },
+       {
+        "Serial": "8",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLNAME",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolName')"
+       },
+       {
+        "Serial": "9",
+        "Verb": "Map",
+        "InstructionCommmented": "0",
+        "TargetKey": "SCHOOLSTATUS",
+        "ContextName": "$('schoolconres.Body.Data.SchoolDetails[M].SchoolStatus')"
+       },
+       {
+        "Serial": "10",
+        "Verb": "Assign",
+        "InstructionCommmented": "0",
+        "TargetKey": "UPDATE_ON",
+        "ContextName": "$('V_DATE')"
+       },
+       {
+        "Serial": "11",
+        "Verb": "EndTable",
+        "InstructionCommmented": "0"
+       },
+       {
+        "Serial": "12",
+        "Verb": "EndLoop",
+        "InstructionCommmented": "0"
+       }
+      ]
+     },
+     "InstructionCommmented": "0",
+     "TargetKey": "20210501120442008282",
+     "Proceed": "0",
+     "ContextName": "20210809180428001053"
+    },
+    {
+     "Serial": "11",
+     "TaskID": "EndEvent_0atunuz",
+     "Verb": "EndFlow",
+     "InstructionCommmented": "0",
+     "Proceed": "0"
+    }
+   ]
+  }
+ },
+ "META-DATA": {
+  "Path": "ADCB/1MK/SchoolInquiry/Flow/SchoolInquiryFlow.flow",
+  "References": {
+   "Endpoint": {"20210501120442008282": "System/ADCB/ADCB_DB/ADCB_DB.ep"},
+   "API": {
+    "20210703130050013132": "ADCB/1MK/SchoolInquiry/API/Scl_prvdr.api",
+    "20210607145201000493": "ADCB/Drop2/Oauth/OauthProvider.api",
+    "20210703130123013135": "ADCB/1MK/SchoolInquiry/API/Scl_cnsmr.api"
+   }
+  }
+ }
+}

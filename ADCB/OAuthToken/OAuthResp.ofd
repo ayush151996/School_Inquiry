@@ -1,0 +1,73 @@
+{
+ "TemplateRepository": {
+  "ComplexTypeList": [{
+   "TypeName": "OAuthResp",
+   "TypesRepository": {
+    "Type": "OAuthResp",
+    "Description": "OAuthResp",
+    "Anonymous": "0"
+   },
+   "NameSpaceID": "OF",
+   "Category": "1",
+   "TypeElements": [
+    {
+     "Serial": "1",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "access_token"
+    },
+    {
+     "Serial": "2",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "token_type"
+    },
+    {
+     "Serial": "3",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "expires_in"
+    },
+    {
+     "Serial": "4",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "scope"
+    }
+   ]
+  }],
+  "RootElementType": "OAuthResp",
+  "TemplateNamespace": "OF",
+  "FileName": "OAuthResp",
+  "MinOccurance": "1",
+  "IsSwagger": "0",
+  "TemplateType": "0",
+  "Code": "20210513154327028000",
+  "MaxOccurance": "1",
+  "Format": "0",
+  "RootElementNamespace": "OF",
+  "RootElementName": "OAuthResp",
+  "IsDomainObject": "0",
+  "isArray": "0"
+ },
+ "META-DATA": {
+  "Path": "ADCB/OAuthToken/OAuthResp.ofd",
+  "References": {"Namespace": {"OF": "Namespace/OF.ns"}}
+ }
+}

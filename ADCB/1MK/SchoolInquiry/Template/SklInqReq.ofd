@@ -1,0 +1,41 @@
+{
+ "TemplateRepository": {
+  "ComplexTypeList": [{
+   "TypeName": "Request_SKLREQ",
+   "TypesRepository": {
+    "Type": "Request_SKLREQ",
+    "Description": "Request_SKLREQ",
+    "Anonymous": "0"
+   },
+   "NameSpaceID": "20210424144106024991",
+   "Category": "1",
+   "TypeElements": [{
+    "Serial": "1",
+    "ElementType": "string",
+    "ItemCategory": "1",
+    "MinOccurance": "1",
+    "isArray": "0",
+    "MaxOccurance": "1",
+    "Namespace": "PRIMITIVETYPES",
+    "Name": "SchoolEmiratesId"
+   }]
+  }],
+  "RootElementType": "Request_SKLREQ",
+  "TemplateNamespace": "20210424144106024991",
+  "FileName": "SklInqReq",
+  "MinOccurance": "1",
+  "IsSwagger": "0",
+  "TemplateType": "0",
+  "Code": "20210703130813014000",
+  "MaxOccurance": "1",
+  "Format": "0",
+  "RootElementNamespace": "20210424144106024991",
+  "RootElementName": "Request",
+  "IsDomainObject": "0",
+  "isArray": "0"
+ },
+ "META-DATA": {
+  "Path": "ADCB/1MK/SchoolInquiry/Template/SklInqReq.ofd",
+  "References": {"Namespace": {"20210424144106024991": "Namespace/ADCB.ns"}}
+ }
+}

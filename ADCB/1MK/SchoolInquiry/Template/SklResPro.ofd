@@ -1,0 +1,106 @@
+{
+ "TemplateRepository": {
+  "ComplexTypeList": [
+   {
+    "TypeName": "Data_SKLResp",
+    "TypesRepository": {
+     "Type": "Data_SKLResp",
+     "Description": "Data_SKLResp",
+     "Anonymous": "0"
+    },
+    "NameSpaceID": "20210424144106024991",
+    "Category": "1",
+    "TypeElements": [{
+     "ElementDesc": "SchoolResponse",
+     "Serial": "1",
+     "ElementType": "SchoolResponse",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "20210424144106024991",
+     "Name": "SchoolDetails"
+    }]
+   },
+   {
+    "TypeName": "SchoolResponse",
+    "TypesRepository": {
+     "Type": "SchoolResponse",
+     "Description": "SchoolResponse",
+     "Anonymous": "0"
+    },
+    "NameSpaceID": "20210424144106024991",
+    "Category": "1",
+    "TypeElements": [
+     {
+      "Serial": "1",
+      "ElementType": "string",
+      "ItemCategory": "1",
+      "MinOccurance": "1",
+      "isArray": "0",
+      "MaxOccurance": "1",
+      "Namespace": "PRIMITIVETYPES",
+      "Name": "SchoolStatus"
+     },
+     {
+      "Serial": "2",
+      "ElementType": "string",
+      "ItemCategory": "1",
+      "MinOccurance": "1",
+      "isArray": "0",
+      "MaxOccurance": "1",
+      "Namespace": "PRIMITIVETYPES",
+      "Name": "SchoolId"
+     },
+     {
+      "Serial": "3",
+      "ElementType": "string",
+      "ItemCategory": "1",
+      "MinOccurance": "1",
+      "isArray": "0",
+      "MaxOccurance": "1",
+      "Namespace": "PRIMITIVETYPES",
+      "Name": "SchoolEmirates"
+     },
+     {
+      "Serial": "4",
+      "ElementType": "string",
+      "ItemCategory": "1",
+      "MinOccurance": "1",
+      "isArray": "0",
+      "MaxOccurance": "1",
+      "Namespace": "PRIMITIVETYPES",
+      "Name": "SchoolAddress"
+     },
+     {
+      "Serial": "5",
+      "ElementType": "string",
+      "ItemCategory": "1",
+      "MinOccurance": "1",
+      "isArray": "0",
+      "MaxOccurance": "1",
+      "Namespace": "PRIMITIVETYPES",
+      "Name": "SchoolName"
+     }
+    ]
+   }
+  ],
+  "RootElementType": "Data_SKLResp",
+  "TemplateNamespace": "20210424144106024991",
+  "FileName": "SklResPro",
+  "MinOccurance": "1",
+  "IsSwagger": "0",
+  "TemplateType": "0",
+  "Code": "20210703182258000000",
+  "MaxOccurance": "1",
+  "Format": "0",
+  "RootElementNamespace": "20210424144106024991",
+  "RootElementName": "Data",
+  "IsDomainObject": "0",
+  "isArray": "0"
+ },
+ "META-DATA": {
+  "Path": "ADCB/1MK/SchoolInquiry/Template/SklResPro.ofd",
+  "References": {"Namespace": {"20210424144106024991": "Namespace/ADCB.ns"}}
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "TemplateRepository": {
+  "ComplexTypeList": [{
+   "TypeName": "proReq",
+   "TypesRepository": {
+    "Type": "proReq",
+    "Description": "proReq",
+    "Anonymous": "0"
+   },
+   "NameSpaceID": "20210424144106024991",
+   "Category": "1",
+   "TypeElements": [
+    {
+     "Serial": "1",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "0",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "CID"
+    },
+    {
+     "Serial": "2",
+     "ElementType": "string",
+     "ItemCategory": "1",
+     "MinOccurance": "1",
+     "isArray": "0",
+     "MaxOccurance": "1",
+     "Namespace": "PRIMITIVETYPES",
+     "Name": "scope"
+    }
+   ]
+  }],
+  "RootElementType": "proReq",
+  "TemplateNamespace": "20210424144106024991",
+  "FileName": "provider_req",
+  "MinOccurance": "1",
+  "IsSwagger": "0",
+  "TemplateType": "0",
+  "Code": "20210607173317000000",
+  "MaxOccurance": "1",
+  "Format": "0",
+  "RootElementNamespace": "20210424144106024991",
+  "RootElementName": "proReq",
+  "IsDomainObject": "0",
+  "isArray": "0"
+ },
+ "META-DATA": {
+  "Path": "ADCB/Drop2/Oauth/provider_req.ofd",
+  "References": {"Namespace": {"20210424144106024991": "Namespace/ADCB.ns"}}
+ }
+}

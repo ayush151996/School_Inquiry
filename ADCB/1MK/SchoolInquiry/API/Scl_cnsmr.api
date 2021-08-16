@@ -1,0 +1,81 @@
+{
+ "META-DATA": {
+  "Path": "ADCB/1MK/SchoolInquiry/API/Scl_cnsmr.api",
+  "References": {
+   "Endpoint": {"20210501111124008261": "System/ADCB/ADCB_Consumer/ADCB_Consumer.ep"},
+   "Template": {
+    "20210703130834014000": "ADCB/1MK/SchoolInquiry/Template/SklInqResp.ofd",
+    "20210703130813014000": "ADCB/1MK/SchoolInquiry/Template/SklInqReq.ofd"
+   }
+  }
+ },
+ "APIRepository": [{
+  "ServerGroup": {"ServerGroupDetails": [{
+   "ServerID": "20210501111124008261",
+   "Enable": "1"
+  }]},
+  "ServerGroupID": "20210704183521000454",
+  "ID": "20210703130209013142",
+  "APIDocID": "20210703130123013135",
+  "Operations": [{
+   "Type": "GET",
+   "ResponseTemplates": [{
+    "TemplateCode": "20210703130834014000",
+    "HTTPStatusCode": "200",
+    "MessageFormat": "JSON"
+   }],
+   "Parameters": {"ParameterList": [
+    {
+     "Type": "HeaderParam",
+     "Key": "Authorization",
+     "Mandatory": "0"
+    },
+    {
+     "TemplateCode": "20210703130813014000",
+     "Type": "PathParam",
+     "Key": "SchoolEmiratesId",
+     "Mandatory": "1"
+    },
+    {
+     "Type": "HeaderParam",
+     "Key": "content-type",
+     "Mandatory": "0"
+    }
+   ]},
+   "ServerGroup": {
+    "ServerGroupDetails": [{
+     "ServerID": "20210501111124008261",
+     "Enable": "1"
+    }],
+    "GroupID": "20210703190728000075"
+   },
+   "ParamID": "20210703190246000069",
+   "OperationName": "/v1/search/schools/school-emirateid/{SchoolEmiratesId}",
+   "OperationID": "20210703130209013143",
+   "IsDeprecated": "0",
+   "Summary": "/v1/search/schools/school-emirateid/{SchoolEmiratesId}",
+   "ServerGroupID": "20210703190728000075"
+  }],
+  "URL": "/v1/search/schools/school-emirateid/{SchoolEmiratesId}"
+ }],
+ "APIDocRepository": {
+  "Type": "S",
+  "ServerGroup": {
+   "ServerGroupDetails": [{
+    "ServerID": "20210501111124008261",
+    "Enable": "1"
+   }],
+   "GroupID": "20210703130148013140"
+  },
+  "IsProxy": "0",
+  "FileName": "Scl_cnsmr",
+  "SystemCode": "20210501110759008257",
+  "WSType": "1",
+  "APIDocInfo": {
+   "Version": "1.0",
+   "Title": "Scl_cnsmr"
+  },
+  "ID": "20210703130123013135",
+  "APIDocInfoID": "20210703130123013136"
+ }
+}

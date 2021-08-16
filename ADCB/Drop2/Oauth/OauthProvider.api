@@ -1,0 +1,64 @@
+{
+ "META-DATA": {
+  "Path": "ADCB/Drop2/Oauth/OauthProvider.api",
+  "References": {"Template": {
+   "20210513154327028000": "ADCB/OAuthToken/OAuthResp.ofd",
+   "20210607173317000000": "ADCB/Drop2/Oauth/provider_req.ofd"
+  }}
+ },
+ "APIRepository": [{
+  "ServerGroup": {"ServerGroupDetails": [{
+   "ServerID": "20210514112943009159",
+   "Enable": "1"
+  }]},
+  "ServerGroupID": "20210607185120001868",
+  "ID": "20210607145401000596",
+  "APIDocID": "20210607145201000493",
+  "Operations": [{
+   "Type": "POST",
+   "ResponseTemplates": [{
+    "TemplateCode": "20210513154327028000",
+    "HTTPStatusCode": "200",
+    "MessageFormat": "JSON"
+   }],
+   "ServerGroup": {
+    "ServerGroupDetails": [{
+     "ServerID": "20210514112943009159",
+     "Enable": "1"
+    }],
+    "GroupID": "20210607150454000632"
+   },
+   "OperationName": "OAuthToken_Provider",
+   "OperationID": "20210607150046000608",
+   "RequestTemplates": [{
+    "TemplateCode": "20210607173317000000",
+    "MessageFormat": "JSON"
+   }],
+   "IsDeprecated": "0",
+   "Summary": "OAuthTokenProvider",
+   "ServerGroupID": "20210607150454000632"
+  }],
+  "URL": "/OAuthToken"
+ }],
+ "APIDocRepository": {
+  "Type": "P",
+  "ServerGroup": {
+   "ServerGroupDetails": [{
+    "ServerID": "20210514112943009159",
+    "Enable": "1"
+   }],
+   "GroupID": "20210607150438000626"
+  },
+  "IsProxy": "0",
+  "FileName": "OauthProvider",
+  "SystemCode": "20210501110759008257",
+  "WSType": "1",
+  "APIDocInfo": {
+   "Version": "1.0",
+   "Title": "OauthProvider"
+  },
+  "ID": "20210607145201000493",
+  "APIDocInfoID": "20210607145201000494",
+  "SecurityScheme": "NA"
+ }
+}
